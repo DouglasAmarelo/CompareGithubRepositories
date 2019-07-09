@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
 	.flex {
 		display: flex;
 	}
+
 `;
 
 export default GlobalStyle;

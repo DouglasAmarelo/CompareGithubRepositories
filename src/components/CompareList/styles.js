@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+	@media only screen and (min-width: 600px) { justify-content: center; }
+	@media only screen and (max-width: 700px) { justify-content: flex-start; }
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
 	margin-top: 30px;
+	width: 100%;
 `;
 
 export const Repository = styled.div`
@@ -15,7 +16,7 @@ export const Repository = styled.div`
 	flex-direction: column;
 	justify-content: space-between;
 	margin: 10px;
-	width: 250px;
+	min-width: 250px;
 	transition: transform .3s ease;
 
 	&:hover {
@@ -93,8 +94,8 @@ export const Repository = styled.div`
 		color: #fff;
 		cursor: pointer;
 		font-size: 12px;
-		height: 35px;
 		margin: 0 .5em;
+		min-height: 35px;
 		padding: .5em .2em;
 		width: 50%;
 
@@ -111,6 +112,10 @@ export const Repository = styled.div`
 		}
 
 		i {
+			@media only screen and (max-width: 600px) {
+				display: block;
+				margin: 0 auto 10px auto;
+			 }
 			font-size: 16px;
 			display: inline-block;
 			margin-right: 10px;

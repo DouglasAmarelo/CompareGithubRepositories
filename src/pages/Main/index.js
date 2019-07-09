@@ -160,18 +160,20 @@ class Main extends Component {
 					</button>
 				</Form>
 
-				<ExampleList className="exemplo">
-					{examples && (
-						examples.map(repo => (
-							<li
-								key={repo}
-								onClick={() => this.tryExample(repo)}
-							>
-								{repo}
-							</li>
-						))
-					)}
-				</ExampleList>
+				<div className="scroll">
+					<ExampleList className="exemplo">
+						{examples && (
+							examples.map(repo => (
+								<li
+									key={repo}
+									onClick={() => this.tryExample(repo)}
+								>
+									{repo}
+								</li>
+							))
+						)}
+					</ExampleList>
+				</div>
 
 				<CompareList
 					loadingUpdate={loadingUpdate}
